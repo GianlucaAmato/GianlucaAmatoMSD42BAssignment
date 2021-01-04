@@ -12,16 +12,16 @@ public class EnemyPath : MonoBehaviour
 
     void Start()
     {
-
         transform.position = waypoints[waypointIndex].transform.position;
+
     }
 
     void Update()
     {
-        EnemyMovement();
+        EnemyMove();
     }
 
-    private void EnemyMovement()
+    private void EnemyMove()
     {
         if (waypointIndex <= waypoints.Count - 1)
         {
