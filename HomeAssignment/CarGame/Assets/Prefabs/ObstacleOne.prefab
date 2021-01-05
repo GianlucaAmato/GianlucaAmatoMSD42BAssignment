@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -8162203710689806487}
   - component: {fileID: 965798207049230778}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: ObstacleOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,12 +72,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31b26ac3c9e14124495b21e8ce5d4e13, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cfba9fc579a20e4f995f34e58b384b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.84, y: 7.73}
+  m_Size: {x: 0.78, y: 1.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 5078366089398941726, guid: d1f745bc310bf3141bb53350e39d894e, type: 3}
-  - {fileID: 4151490839217369386, guid: 49eb9733011b20341950659c633c2bd2, type: 3}
-  - {fileID: 1523719614442955703, guid: 549a853afe2a17b4ab4c8eb691ac58e0, type: 3}
-  - {fileID: 6473295065979452040, guid: f5afa7a278404624c9db31ec51c59182, type: 3}
-  - {fileID: 4403944124711651228, guid: fc546fad13c43a94aad1c486bfbc9177, type: 3}
-  enemyMoveSpeed: 2
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  waveConfiguration: {fileID: 11400000, guid: 7c8908f9eb2240446b56c5835aa7abd7, type: 2}
