@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6976958155508205714}
   - component: {fileID: 1446245811907991185}
   - component: {fileID: 7904069458894650581}
+  - component: {fileID: 1729094008550965201}
+  - component: {fileID: 307637098113374857}
   m_Layer: 0
   m_Name: Obstacle2
   m_TagString: Untagged
@@ -96,5 +98,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints: []
-  obstacleMoveSpeed: 2
-  waveConfiguration: {fileID: 11400000, guid: 34e16fe3aba944f4e811f3fcced8dd8d, type: 2}
+  waveConfiguration: {fileID: 0}
+--- !u!70 &1729094008550965201
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4850492925699037850}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.03, y: 0.64}
+  m_Direction: 0
+--- !u!114 &307637098113374857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4850492925699037850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf03515a61b595c49b58aa923e714b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2

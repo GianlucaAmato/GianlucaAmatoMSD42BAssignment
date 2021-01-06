@@ -6,7 +6,7 @@ using UnityEngine.XR.WSA.Input;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] int health = 100;
+    [SerializeField] int health = 1;
     [SerializeField] float movementSpeed = 5f;
 
     float xMin, xMax;
@@ -42,5 +42,27 @@ public class Player : MonoBehaviour
         newXPos = Mathf.Clamp(newXPos, xMin, xMax);
 
         transform.position = new Vector2(newXPos, newYPos);
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        //access DamageDealer from otherObject that hit the enemy
+        //and reduce health accordingly
+        DamageDealer dmg = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        ProcessHit(dmg);
+
+    }
+
+    private void ProcessHit(DamageDealer dmg)
+    {
+        health -= dmg.GetDamage();
+
+        dmg.Hit();
+        //destroy enemy laser
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

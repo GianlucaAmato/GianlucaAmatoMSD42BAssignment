@@ -32,22 +32,25 @@ public class ObstaclePath : MonoBehaviour
 
             targetPosition.z = 0f;
 
-            var enemyMovement = waveConfiguration.GetObstacleMoveSpeed() * Time.deltaTime;
+            var obstacleMovement = waveConfiguration.GetObstacleMoveSpeed() * Time.deltaTime;
 
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, enemyMovement);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, obstacleMovement);
 
             if (transform.position == targetPosition)
             {
                 waypointIndex++;
             }
         }
-
+        //arriving at last waypoint
         else
         {
             Destroy(gameObject);
         }
+    }
 
-       
+    public void SetWaveConfiguration(WaveConfiguration waveConfigurationToSet)
+    {
+        waveConfiguration = waveConfigurationToSet;
     }
 
 }
