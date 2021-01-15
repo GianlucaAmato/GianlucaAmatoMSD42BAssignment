@@ -8,8 +8,6 @@ public class ObstacleSpawner : MonoBehaviour
 
     [SerializeField] bool looping = true;
 
-    int startingWave = 0;
-
     IEnumerator Start()
     {
         do

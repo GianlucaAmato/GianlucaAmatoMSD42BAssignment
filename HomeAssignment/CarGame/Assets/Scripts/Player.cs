@@ -62,7 +62,14 @@ public class Player : MonoBehaviour
         //destroy enemy laser
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+
+        FindObjectOfType<Level>().LoadGameOver();
     }
 }
