@@ -6,7 +6,7 @@ using UnityEngine.XR.WSA.Input;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] int health = 1;
+    [SerializeField] int health = 50;
     [SerializeField] float movementSpeed = 5f;
 
     [SerializeField] GameObject DeathEffect;
@@ -26,6 +26,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     //Camera bounderies
@@ -63,8 +68,9 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer dmg)
     {
         health -= dmg.GetDamage();
+        
 
-        dmg.Hit();
+         dmg.Hit();
         //destroy enemy laser
         if (health <= 0)
         {
