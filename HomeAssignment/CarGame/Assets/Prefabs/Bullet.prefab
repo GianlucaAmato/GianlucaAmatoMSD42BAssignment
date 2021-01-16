@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8171833059732330534}
   - component: {fileID: 809467565680242509}
   - component: {fileID: 7169055821556438321}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,6 +114,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  IsEnemy: 0
+  DeathEffect: {fileID: 0}
+  explosionDuration: 0.5
+  ObstacleDeathSound: {fileID: 0}
+  obstacleDeathSoundVolume: 0
 --- !u!50 &7169055821556438321
 Rigidbody2D:
   serializedVersion: 4
