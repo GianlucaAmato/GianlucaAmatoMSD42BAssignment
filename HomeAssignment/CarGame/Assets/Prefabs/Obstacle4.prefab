@@ -147,6 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
+  IsEnemy: 1
+  DeathEffect: {fileID: 8636452580775406681, guid: 0cf3edc823ffdcc4aa48b660187ea3ff, type: 3}
+  explosionDuration: 0.5
+  ObstacleDeathSound: {fileID: 8300000, guid: 8685179df7b99c44a8bd975673605601, type: 3}
+  obstacleDeathSoundVolume: 0.15
 --- !u!50 &3142158277411629130
 Rigidbody2D:
   serializedVersion: 4

@@ -9,6 +9,12 @@ public class Player : MonoBehaviour
     [SerializeField] int health = 1;
     [SerializeField] float movementSpeed = 5f;
 
+    [SerializeField] GameObject DeathEffect;
+    [SerializeField] float explosionDuration = 0.5f;
+
+    [SerializeField] AudioClip PlayerDeathSound;
+    [SerializeField] [Range(0, 1)] float PlayerDeathSoundVolume;
+
     float xMin, xMax;
     float padding = 0.5f;
 
@@ -68,6 +74,8 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        AudioSource.PlayClipAtPoint(PlayerDeathSound, Camera.main.transform.position, PlayerDeathSoundVolume);
+        GameObject explosion = Instantiate(DeathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
 
         FindObjectOfType<Level>().LoadGameOver();

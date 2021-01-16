@@ -98,6 +98,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   movementSpeed: 5
+  DeathEffect: {fileID: 8636452580775406681, guid: 0cf3edc823ffdcc4aa48b660187ea3ff, type: 3}
+  explosionDuration: 0.5
+  PlayerDeathSound: {fileID: 8300000, guid: 8685179df7b99c44a8bd975673605601, type: 3}
+  PlayerDeathSoundVolume: 0.1
 --- !u!60 &-1069997899000450496
 PolygonCollider2D:
   m_ObjectHideFlags: 0
