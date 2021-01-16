@@ -15,5 +15,5 @@ MonoBehaviour:
   obstaclePrefab: {fileID: 4850492925699037850, guid: e947ae2d8141bbd43bd9077bf933dea2, type: 3}
   pathPrefab: {fileID: 1501951543313384409, guid: a67d7b285d6d0f244a30c6bdc6ae9ff0, type: 3}
   timeBetweenObstacles: 3
-  numberOfObstacles: 6
+  numberOfObstacles: 5
   obstacleMoveSpeed: 1

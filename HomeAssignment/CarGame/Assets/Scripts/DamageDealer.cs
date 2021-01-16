@@ -6,13 +6,15 @@ public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 1;
 
-    [SerializeField] bool IsEnemy = false;
+    [SerializeField] public bool IsEnemy = false;
 
     [SerializeField] GameObject DeathEffect;
     [SerializeField] float explosionDuration = 0.5f;
 
     [SerializeField] AudioClip ObstacleDeathSound;
     [SerializeField] [Range(0, 1)] float obstacleDeathSoundVolume;
+
+    
 
     public int GetDamage()
     {
@@ -39,5 +41,6 @@ public class DamageDealer : MonoBehaviour
         AudioSource.PlayClipAtPoint(ObstacleDeathSound, Camera.main.transform.position, obstacleDeathSoundVolume);
 
         Destroy(explosion, explosionDuration);
+
     }
 }
