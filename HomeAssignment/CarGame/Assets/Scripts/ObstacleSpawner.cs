@@ -17,11 +17,6 @@ public class ObstacleSpawner : MonoBehaviour
         while (looping);
     }
 
-    
-    void Update()
-    {
-        
-    }
 
     //specified location
     private IEnumerator SpawnAllObstaclesInWave(WaveConfiguration waveToSpawn)
