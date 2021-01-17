@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-    int score = 0;
+    public int score = 0;
 
     void Awake()
     {
         SetUpSingleton();
+    }
+
+    private void Update()
+    {
+        PointCheck();
     }
 
     private void SetUpSingleton()
@@ -38,6 +43,15 @@ public class GameSession : MonoBehaviour
     public void ResetGame()
     {
         Destroy(gameObject); 
+    }
+
+    public void PointCheck()
+    {
+        if (score >= 100)
+        {
+            Destroy(gameObject);
+            FindObjectOfType<Level>().PlayerWins();
+        }
     }
 
 }

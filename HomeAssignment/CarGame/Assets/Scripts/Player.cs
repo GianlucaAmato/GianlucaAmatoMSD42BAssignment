@@ -15,11 +15,15 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip PlayerDeathSound;
     [SerializeField] [Range(0, 1)] float PlayerDeathSoundVolume;
 
+    GameSession gameSession;
+    int Score;
+
     float xMin, xMax;
     float padding = 0.5f;
 
     void Start()
     {
+        gameSession = FindObjectOfType<GameSession>();
         BounderiesMovement();
     }
 
@@ -68,11 +72,13 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer dmg)
     {
         health -= dmg.GetDamage();
-        
+        Score = gameSession.GetScore();
+
+
 
          dmg.Hit();
         //destroy enemy laser
-        if (health <= 0)
+        if (health <= 0 && Score < 100)
         {
             Die();
         }

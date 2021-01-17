@@ -35,4 +35,9 @@ public class Level : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void PlayerWins()
+    {
+        SceneManager.LoadScene("Winner");
+    }
 }
